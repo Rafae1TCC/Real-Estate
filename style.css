@@ -74,6 +74,32 @@ img {
   display: flex;
 }
 
+.nav-menu {
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-container h3 {
+    text-align: center;
+  }
+
+  .about-container img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .houses-container {
+    flex-direction: column;
+  }
+}
+
 .menu-bar {
   display: flex;
   flex-direction: row;
@@ -85,6 +111,58 @@ img {
 
 .menu-bar a {
   margin-right: 20px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .menu-icon {
+    display: block;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+  }
+
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-menu li {
+    padding: 10px;
+  }
+
+  .nav-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
 }
 
 .money {
