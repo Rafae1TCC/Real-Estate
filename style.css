@@ -22,6 +22,12 @@ a {
   color: white;
 }
 
+h1{
+  font-size: 3.2rem;
+  text-align: center;
+  padding: 10px;
+}
+
 h2 {
   font-size: 2.2rem;
   text-align: center;
@@ -72,9 +78,7 @@ img {
 
 .about-container {
   display: flex;
-}
-
-.nav-menu {
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 480px) {
@@ -169,15 +173,25 @@ img {
   color: green;
 }
 
-.btn-more {
+.btn-more, .btn-start {
   display: block;
   padding: 10px;
-  background-color: orange;
+  font-size: 12px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 12px;
   letter-spacing: 3px;
   border-radius: 5px;
+}
+
+.btn-start{
+  background-color: green;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-more{
+  background-color: orange;
 }
 
 .houses-item {
@@ -185,17 +199,27 @@ img {
   margin: 6px;
   border: 2px solid rgb(180, 180, 180);
 }
+.about-item {
+  text-align: center;
+  margin: 6px;
+  background-color: #effbe6;
+  border: 2px solid #e6f8d9;
+}
 
-.houses-item-text {
+.houses-container{
+  display: flex;
+}
+.blog-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.houses-item-text, .about-item text{
   padding: 20px;
 }
 
-.houses-item h2 {
+.houses-item h2{
   text-align: left;
-}
-
-.houses-container {
-  display: flex;
 }
 
 .icon-item {
@@ -317,4 +341,44 @@ i {
   border-left: 2px solid black;
   padding-left: 10px;
   margin-left: 10px;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  background-color: #dedede;
+  margin: 6px;
+  border: 2px solid rgb(180, 180, 180);
+  padding: 10px;
+}
+
+.blog-align{
+  text-align: center;
+}
+
+.blog-item img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+.blog-item-text {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .blog-item{
+    flex-direction: column;
+  }
 }
